@@ -2,6 +2,11 @@
 
 A basic workflow to query the available Android Netrunner cards
 
+## Installing
+Download the [Netrunner Alfred.workflow](https://github.com/yonbergman/netrunner-alfred-workflow/raw/master/Netrunner%20Finder.alfredworkflow) and import it to Alfred 2 (requires the Alfred Powerpack)
+
+
+## Usage
 To run the query use either `netrunner {query}` or the shorthand `nr {query}`
 
 ![](https://raw.github.com/yonbergman/netrunner-alfred-workflow/master/screenshots/screenshot-a.png)
