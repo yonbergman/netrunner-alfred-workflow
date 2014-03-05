@@ -4,14 +4,13 @@ A basic workflow to query the available Android Netrunner cards
 
 To run the query use either `netrunner {query}` or the shorthand `nr {query}`
 
+![](https://raw.github.com/yonbergman/netrunner-alfred-workflow/master/screenshots/screenshot-a.png)
 
-![/screenshots/screenshot-a.png]()
-
-![/screenshots/screenshot-b.png]()
+![](https://raw.github.com/yonbergman/netrunner-alfred-workflow/master/screenshots/screenshot-b.png)
 
 ## Built Using
 
-* [alfred2-ruby-framework]( https://github.com/canadaduane/alfred2-ruby-framework )
+* [alfred2-ruby-template]( https://github.com/zhaocai/alfred2-ruby-template )
 * [ono-sendai]( https://github.com/shyndman/ono-sendai )
 
 ## LICENSE:
