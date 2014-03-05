@@ -79,4 +79,11 @@ task :clobber => [:clean] do
   rmtree File.join($config["path"], "bundle")
 end
 
-
+desc 'Update card json'
+task 'cards:update' => [:chdir] do
+  sh %Q{wget -N onosendaicorp.com/data/cards.json} do |ok, res|
+    if ! ok
+      puts "failed to update cards (status = #{res.exitstatus})"
+    end
+  end
+end

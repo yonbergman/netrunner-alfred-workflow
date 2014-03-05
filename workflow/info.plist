@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.zhaowu.alfred2-ruby-template</string>
+	<string>com.yon.netrunner-workflow</string>
 	<key>connections</key>
 	<dict>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>42D05639-3F0F-4760-8214-317167E4173D</string>
+				<string>93F36574-1546-4D16-9FE9-4E6EF2832A0B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
 		</array>
-		<key>BA17BE41-176A-4E9A-B958-A3F0BEA36829</key>
+		<key>2564452F-56C8-424A-A4C2-8F6025AC3991</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>42D05639-3F0F-4760-8214-317167E4173D</string>
+				<string>93F36574-1546-4D16-9FE9-4E6EF2832A0B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -30,32 +30,32 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Zhao Cai</string>
+	<string>Yonatan Bergman (@yonbergman)</string>
 	<key>description</key>
-	<string>A starting place for developing Ruby based workflow in Alfred</string>
+	<string>A workflow to find netrunner cards</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Ruby Based Workflow Template</string>
+	<string>Netrunner Finder</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>keyword</key>
-				<string>test feedback</string>
+				<string>netrunner</string>
 				<key>runningsubtext</key>
-				<string>working...</string>
+				<string>searching...</string>
 				<key>script</key>
 				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
-				<string>Ruby Based Workflow Template</string>
+				<string>[Click] Search for a card by name</string>
 				<key>title</key>
-				<string>Test Alfred Feedback</string>
+				<string>Netrunner Finder</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -65,56 +65,54 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>plusspaces</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
+				<key>url</key>
 				<string>{query}</string>
-				<key>title</key>
-				<string>Ruby Script</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>42D05639-3F0F-4760-8214-317167E4173D</string>
+			<string>93F36574-1546-4D16-9FE9-4E6EF2832A0B</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
 				<key>keyword</key>
-				<string>test rescue feedback</string>
+				<string>nr</string>
 				<key>runningsubtext</key>
-				<string>...</string>
+				<string>searching...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby ./main_with_rescue_feedback.rb {query}</string>
+				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
-				<string>Ruby Based Workflow Template</string>
+				<string>[Click] Search for a card by name</string>
 				<key>title</key>
-				<string>Test Alfred Rescue Feedback</string>
+				<string>Netrunner Finder</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>BA17BE41-176A-4E9A-B958-A3F0BEA36829</string>
+			<string>2564452F-56C8-424A-A4C2-8F6025AC3991</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -124,20 +122,20 @@
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>10</real>
 		</dict>
-		<key>42D05639-3F0F-4760-8214-317167E4173D</key>
+		<key>2564452F-56C8-424A-A4C2-8F6025AC3991</key>
 		<dict>
 			<key>ypos</key>
-			<real>140</real>
+			<real>120</real>
 		</dict>
-		<key>BA17BE41-176A-4E9A-B958-A3F0BEA36829</key>
+		<key>93F36574-1546-4D16-9FE9-4E6EF2832A0B</key>
 		<dict>
 			<key>ypos</key>
-			<real>370</real>
+			<real>10</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>http://github.com/zhaocai/alfred2-ruby-template</string>
+	<string>http://yonbergman.com</string>
 </dict>
 </plist>

@@ -3,6 +3,8 @@ GEM
   specs:
     alfred-workflow (1.8.0)
       plist (>= 3.1.0)
+    hashie (2.0.5)
+    json (1.8.1)
     plist (3.1.0)
 
 PLATFORMS
@@ -10,4 +12,6 @@ PLATFORMS
 
 DEPENDENCIES
   alfred-workflow
+  hashie
+  json
   plist
