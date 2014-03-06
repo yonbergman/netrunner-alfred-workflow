@@ -21,7 +21,7 @@ class CardFinder
     {
       :uid      => card.number,
       :title    => card.title + extra_for_title(card),
-      :subtitle => [card.type, card.subtype, card.text.gsub(/<\/?strong>/, '')].reject{|e| e.nil? or e.empty? }.join(' - '),
+      :subtitle => [card.type, card.subtype, card.text.gsub(/<\/?strong>/, '').gsub(/<\/?sup>/, ' ').gsub('&ndash;','-')].reject{|e| e.nil? or e.empty? }.join(' - '),
       :arg      => card.nrdb_url,
       :icon     => { :type => 'default', :name => "./images/#{icon_for_faction(card)}.png" },
       :match?       => :all_title_match?
