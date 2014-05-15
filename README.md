@@ -18,6 +18,13 @@ To run the query use either `netrunner {query}` or the shorthand `nr {query}`
 * [alfred2-ruby-template]( https://github.com/zhaocai/alfred2-ruby-template )
 * [ono-sendai]( https://github.com/shyndman/ono-sendai )
 
+## Development
+
+* Make sure to switch to system ruby (if using rvm `rvm use system`)
+* Install the plist gem `gem install plist`
+* Update the card.db by running `rake cards:update`
+* Compile and test the new workflow by running `rake dbxinstall`
+
 ## LICENSE:
 
 Copyright (c) 2014 Yonatan Bergman @yonbergman
