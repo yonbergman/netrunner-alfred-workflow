@@ -81,7 +81,7 @@ end
 
 desc 'Update card json'
 task 'cards:update' => [:chdir] do
-  sh %Q{wget -N onosendaicorp.com/data/cards.json} do |ok, res|
+  sh %Q{wget -N http://netrunnerdb.com/api/cards} do |ok, res|
     if ! ok
       puts "failed to update cards (status = #{res.exitstatus})"
     end

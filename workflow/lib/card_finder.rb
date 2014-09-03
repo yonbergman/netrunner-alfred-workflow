@@ -2,10 +2,10 @@ require 'json'
 require 'hashie'
 
 class CardFinder
-  FILENAME = 'cards.json'
+  FILENAME = 'cards'
 
   def initialize
-    @cards = Hashie::Mash.new(JSON.parse(open(FILENAME, "r:UTF-8").read())).cards
+    @cards = JSON.parse(open(FILENAME, "r:UTF-8").read()).map{|x| Hashie::Mash.new(x)}
   end
 
   def run(alfred, query)
@@ -19,10 +19,10 @@ class CardFinder
 
   def card_to_item(card)
     {
-      :uid      => card.number,
+      :uid      => card.code,
       :title    => card.title + extra_for_title(card),
       :subtitle => [card.type, card.subtype, card.text.gsub(/<\/?strong>/, '').gsub(/<\/?sup>/, ' ').gsub('&ndash;','-')].reject{|e| e.nil? or e.empty? }.join(' - '),
-      :arg      => card.nrdb_url,
+      :arg      => card.url,
       :icon     => { :type => 'default', :name => "./images/#{icon_for_faction(card)}.png" },
       :match?       => :all_title_match?
     }
