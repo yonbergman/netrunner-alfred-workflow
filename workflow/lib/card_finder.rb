@@ -12,7 +12,7 @@ class CardFinder
     query ||= ''
     feedback = alfred.feedback
     @cards.each do |card|
-      feedback.add_item(card_to_item(card))
+      feedback.add_item(card_to_item(card)) unless should_skip_card?(card)
     end
     feedback.to_alfred(query)
   end
@@ -26,6 +26,10 @@ class CardFinder
       :icon     => { :type => 'default', :name => "./images/#{icon_for_faction(card)}.png" },
       :match?       => :all_title_match?
     }
+  end
+
+  def should_skip_card?(card)
+    card.set_code == 'alt'
   end
 
   def extra_for_title(card)
